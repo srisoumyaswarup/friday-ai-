@@ -173,9 +173,7 @@ async function askGemini(userMessage) {
       return `Gemini returned an error, sir: ${msg}`;
     }
 
-    const reply = data.candidates[0].content.parts[0].text.trim();
-    conversationHistory.push({ role: 'model', parts: [{ text: reply }] });
-    return reply;
+    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "I'm having trouble thinking right now, sir.";
 
   } catch (e) {
     conversationHistory.pop();

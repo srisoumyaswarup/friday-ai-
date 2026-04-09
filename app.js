@@ -49,7 +49,7 @@ function animateBars() {
     else                     h = 3 + Math.abs(Math.sin(t * 0.15 + i * 0.55)) * 3;
     b.style.height = h + 'px';
   });
-  requestAnimationFrame(animateBars);
+  requestAnimation,Frame(animateBars);
 }
 animateBars();
 
